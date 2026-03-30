@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW3 - Q1 and Q2 Solutions</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<!-- ============================================================
+     ANSWER 1
+     The background color is dark blue #0066CC so the text color
+     must be white #FFFFFF to give good contrast and be readable.
+     The header is missing font-family so we add Arial, sans-serif.
+     The two missing tags are </style> to close the CSS block
+     and </head> to close the head section.
+     ============================================================ -->
+
+<!-- ANSWER 1 CODE START -->
+
+  <!-- body sets the page background to dark blue and text to white -->
+  <style>
+    body {
+      background-color: #0066CC; /* dark blue background */
+      color: #FFFFFF;            /* white text - good contrast on dark blue */
+    }
+
+    /* header uses Arial font as required */
+    header {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+  <header>
+    <h1>Trillium Media Design</h1>
+  </header>
+
+  <p>Our professional staff takes pride in its working relationship with our clients
+  by offering personalized services that listen to their needs, develop their target
+  areas, and incorporate these items into a website that works.</p>
+
+<!-- ANSWER 1 CODE END -->
+
+
+
+
+<!-- ============================================================
+     ANSWER 2
+     The error is that the closing tag of the style block was
+     written as <style> instead of </style>.
+     Without the forward slash / the browser thinks a new style
+     block is opening so the CSS never closes properly and the
+     page cannot display correctly.
+     The fix is simply changing <style> to </style> at the end
+     of the CSS block.
+     ============================================================ -->
+
+<!-- ANSWER 2 CODE START -->
+
+  <!-- this style block is now correctly closed with </style> -->
+  <style>
+    body {
+      background-color: #000066;        /* dark navy background */
+      color: #CCCCCC;                   /* light gray text */
+      font-family: Arial, sans-serif;   /* Arial font for all text */
+      font-size: 1.2em;                 /* slightly larger text size */
+    }
+  </style>   <!-- FIXED: was <style> before, now correctly </style> -->
+
+  <header>
+    <h1>Trillium Media Design</h1>
+  </header>
+
+  <main>
+    <p>Our professional staff takes pride in its working relationship with our clients
+    by offering personalized services that listen to their needs, develop their target
+    areas, and incorporate these items into a website that works.</p>
+  </main>
+
+<!-- ANSWER 2 CODE END -->
+
+
+</body>
+</html>
