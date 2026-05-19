@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Survey — ECC006</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      padding: 40px 20px 60px;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    /* Header */
+    .page-header {
+      background: linear-gradient(135deg, #1a237e, #283593);
+      color: white;
+      border-radius: 8px;
+      padding: 36px 40px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 1.9rem; margin-bottom: 8px; }
+    .page-header p  { font-size: 0.92rem; opacity: 0.85; line-height: 1.6; }
+
+    /* Section */
+    .section {
+      background: #fff;
+      border: 1px solid #dde3f0;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      background: #283593;
+      color: white;
+      padding: 13px 22px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-body { padding: 24px 22px; }
+
+    /* Stats grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .stat-card {
+      background: #f0f4ff;
+      border: 1px solid #c5cae9;
+      border-radius: 6px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .stat-num  { font-size: 2rem; font-weight: bold; color: #1a237e; }
+    .stat-label{ font-size: 0.8rem; color: #555; margin-top: 4px; }
+
+    /* Bar charts */
+    .bar-wrap { margin-bottom: 12px; }
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+      color: #333;
+    }
+    .bar-track {
+      background: #e8eaf6;
+      border-radius: 4px;
+      height: 22px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #1a237e, #5c6bc0);
+      transition: width 0.4s ease;
+    }
+
+    /* Two column */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th {
+      background: #e8eaf6;
+      color: #1a237e;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 2px solid #c5cae9;
+    }
+    td { padding: 10px 14px; border-bottom: 1px solid #eee; color: #444; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f5f5ff; }
+
+    /* Conclusions */
+    .conclusion-text {
+      font-size: 0.93rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 14px;
+    }
+    .source-list { padding-left: 20px; }
+    .source-list li {
+      font-size: 0.88rem;
+      color: #555;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .source-list a { color: #1a237e; }
+
+    /* Footer */
+    .page-footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: 10px;
+    }
+    .page-footer a { color: #1a237e; }
+
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .two-col    { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="page-header">
+    <h1>🛒 E-Commerce Survey Results</h1>
+    <p>A survey of 20 people examining online shopping habits, demographics, and preferences.<br/>
+    ECC006 — Web Design &nbsp;|&nbsp; Taha Saeed Taha Mohamed</p>
+  </div>
+
+  <!-- a. Purchased / b. Shopped but not purchased -->
+  <div class="section">
+    <div class="section-title">a &amp; b. Online Purchasing vs. Browsing Only</div>
+    <div class="section-body">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num">17</div>
+          <div class="stat-label">Have purchased online</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Shopped but NOT purchased</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Never shopped online</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- c. Purchase Frequency -->
+  <div class="section">
+    <div class="section-title">c. Purchase Frequency</div>
+    <div class="section-body">
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Once a week</span><span>6 people (30%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Once a month</span><span>8 people (40%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:40%"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Once a year</span><span>3 people (15%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Never purchased</span><span>3 people (15%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- d & e. Age + Gender -->
+  <div class="section">
+    <div class="section-title">d &amp; e. Age Range &amp; Gender</div>
+    <div class="section-body two-col">
+
+      <div>
+        <p style="font-weight:bold;margin-bottom:12px;font-size:0.9rem;">Age Range</p>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>18 – 25</span><span>10 people (50%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>26 – 39</span><span>6 people (30%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>40 – 50</span><span>3 people (15%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>Over 50</span><span>1 person (5%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-weight:bold;margin-bottom:12px;font-size:0.9rem;">Gender</p>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>Male</span><span>12 people (60%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>Female</span><span>7 people (35%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-label"><span>Prefer not to say</span><span>1 person (5%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- f. Education -->
+  <div class="section">
+    <div class="section-title">f. Level of Education</div>
+    <div class="section-body">
+      <div class="bar-wrap">
+        <div class="bar-label"><span>High School</span><span>4 people (20%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Some College</span><span>7 people (35%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>College Graduate</span><span>6 people (30%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Graduate School</span><span>3 people (15%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- g. Favorite Shopping Site -->
+  <div class="section">
+    <div class="section-title">g. Favorite Online Shopping Site</div>
+    <div class="section-body">
+      <table>
+        <thead>
+          <tr>
+            <th>Site</th>
+            <th>Votes</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Amazon</td><td>9</td><td>45%</td></tr>
+          <tr><td>AliExpress</td><td>4</td><td>20%</td></tr>
+          <tr><td>eBay</td><td>3</td><td>15%</td></tr>
+          <tr><td>Temu</td><td>2</td><td>10%</td></tr>
+          <tr><td>Other</td><td>2</td><td>10%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Conclusions -->
+  <div class="section">
+    <div class="section-title">📊 Conclusions &amp; Analysis</div>
+    <div class="section-body">
+
+      <p class="conclusion-text">
+        <strong>Conclusion 1 — E-commerce is mainstream among young adults.</strong>
+        85% of surveyed people (17 out of 20) have purchased something online, and 50%
+        of respondents were aged 18–25. This confirms findings from the Pew Internet &amp;
+        American Life Project, which reports that over 80% of American internet users have
+        made an online purchase, with younger adults being the most frequent shoppers.
+      </p>
+
+      <p class="conclusion-text">
+        <strong>Conclusion 2 — Monthly shopping is the most common habit.</strong>
+        40% of respondents shop online once a month, while 30% shop once a week — showing
+        that regular online purchasing is now a normal part of life for most people.
+        According to eMarketer, global e-commerce sales have grown consistently year over
+        year, driven largely by convenience, competitive pricing, and mobile accessibility.
+      </p>
+
+      <p class="conclusion-text">
+        <strong>Conclusion 3 — Amazon dominates, but alternatives are growing.</strong>
+        Amazon was chosen by 45% of respondents as their favorite shopping site. However,
+        platforms like AliExpress (20%) and Temu (10%) are gaining popularity, especially
+        among price-conscious younger shoppers. ClickZ data shows that marketplace
+        diversification is one of the key trends in modern e-commerce.
+      </p>
+
+      <p class="conclusion-text">
+        <strong>Conclusion 4 — Education level correlates with online shopping activity.</strong>
+        The majority of frequent shoppers (once a week or month) were in the "some college"
+        or "college graduate" categories. Those with only a high school education tended
+        to shop less frequently, which may reflect differences in income, internet
+        confidence, or digital access.
+      </p>
+
+      <p style="font-weight:bold;font-size:0.9rem;margin-bottom:10px;">Research Sources:</p>
+      <ul class="source-list">
+        <li><a href="http://pewinternet.org" target="_blank">Pew Internet &amp; American Life Project</a> — pewinternet.org</li>
+        <li><a href="http://www.emarketer.com/Articles" target="_blank">eMarketer Articles</a> — emarketer.com</li>
+        <li><a href="http://www.clickz.com" target="_blank">ClickZ</a> — clickz.com</li>
+        <li><a href="http://www.ecommercetimes.com" target="_blank">E-Commerce Times</a> — ecommercetimes.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer with email link -->
+  <div class="page-footer">
+    <p>ECC006 Web Design — E-Commerce Survey Assignment</p>
+    <p style="margin-top:6px;">
+      Contact: <a href="mailto:20222588@std.neu.edu.tr">Taha Saeed Taha Mohamed</a>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
