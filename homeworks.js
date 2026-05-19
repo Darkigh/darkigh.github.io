@@ -19,8 +19,9 @@ window.HOMEWORKS = [
   { id: 5, title: "HW #5", desc: ".",                          file: "HW5.docx"   },
   { id: 6, title: "HW #6", desc: ".",                          file: "HW6.pdf"   },
   { id: 7, title: "HW #7", desc: ".",                          file: "HW7.pdf"   },
-  { id: 8, title: "HW #8P1", desc: "movie website",                          file: "Movie75.html" },
+  { id: 8, title: "HW #8P1", desc: "movie website",                          file: "Movie8.html" },
   { id: 9, title: "HW #8P2", desc: ".",                          file: "HW8P2.pdf"   },
   { id: 10, title: "HW #8P3", desc: ".",                          file: "HW8P3.pdf"   },
   { id: 11, title: "HW #9", desc: ".",                          file: "HW9.html"   },
+   { id: 12, title: "HW #10", desc: ".",                          file: "HW10.html"   }
 ];
