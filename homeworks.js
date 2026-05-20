@@ -23,5 +23,6 @@ window.HOMEWORKS = [
   { id: 9, title: "HW #8P2", desc: ".",                          file: "HW8P2.pdf"   },
   { id: 10, title: "HW #8P3", desc: ".",                          file: "HW8P3.pdf"   },
   { id: 11, title: "HW #9", desc: ".",                          file: "HW9.html"   },
-   { id: 12, title: "HW #10", desc: ".",                          file: "HW10.html"   }
+   { id: 12, title: "HW #10", desc: ".",                          file: "HW10.html"   },
+  { id: 13, title: "projrct", desc: ".",                          file: "https://darkigh.github.io/my-hobbie/"   }
 ];
